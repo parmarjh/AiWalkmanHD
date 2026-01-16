@@ -1,0 +1,23 @@
+# AI Models
+*.pb
+
+# Video Data
+uploads/
+processed/
+temp_nosound.mp4
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+.venv/
+
+# Streamlit
+.streamlit/
+! .streamlit/config.toml
+
+# OS
+.DS_Store
+Thumbs.db
