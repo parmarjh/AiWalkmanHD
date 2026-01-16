@@ -2,7 +2,8 @@
 ### *Breathe New Life into the Classics*
 
 
-![RetroHD Banner](C:/Users/parma/.gemini/antigravity/brain/a32e62b2-6342-4ed8-b32a-9b97a21ae383/retro_hd_banner_1768539753996.png)
+![AiWalkmanHD Banner](C:/Users/parma/.gemini/antigravity/brain/a32e62b2-6342-4ed8-b32a-9b97a21ae383/ai_walkman_hd_banner_new_1768543357794.png)
+
 
 **AiWalkmanHD** is a premium AI-powered video reconstruction tool designed to transform low-resolution 90s, 60s, and 30s movies into modern High Definition (HD). Using state-of-the-art Deep Learning Super-Resolution models, AiWalkmanHD doesn't just stretch pixels—it **reconstructs** them.
 
