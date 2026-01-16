@@ -11,10 +11,12 @@
 
 ## ✨ Key Features
 - 🧠 **Deep Learning Models**: Multiple AI engines (FSRCNN, EDSR, LapSRN) for different types of movie restoration.
+- 🎨 **AI Colorization**: Instantly transform vintage Black & White films into vibrant color using Neural Networks.
 - 🚀 **4x Upscaling**: Convert standard 480p footage into extremely sharp 4K-like detail.
 - 🎵 **Smart Audio Preservation**: Automatically extracts and merges original audio tracks back into the upscaled video.
-- 🎨 **Premium UI**: Built with a sleek, dark-mode Streamlit dashboard for effortless processing.
+- 🖥️ **Premium UI**: Built with a sleek, dark-mode Streamlit dashboard for effortless processing.
 - 🎥 **Format Support**: Upload and process MP4, AVI, MOV, and MKV files.
+
 
 ---
 
@@ -61,8 +63,11 @@ API Documentation will be available at: `http://localhost:8000/docs`
 3. **Upload or Stream**: 
    - Use the **File Upscale** tab for 90s movies on your computer.
    - Use the **Live TV / HDMI** tab for online streams and IPTV.
-4. **Configure**: Select your preferred AI model (FSRCNN is fastest).
+4. **Configure**: 
+   - Select your preferred AI model.
+   - Check the **"Colorize B&W Movie"** box for vintage films.
 5. **Process**: Click **"Start AI Upscaling"**.
+
 6. **HDMI Output**: Drag the resulting Live window to your TV screen and press 'F'.
 
 

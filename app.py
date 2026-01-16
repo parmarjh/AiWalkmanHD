@@ -1,6 +1,7 @@
 import streamlit as st
 import os
-from upscaler_engine import AIVideoUpscaler
+from upscaler_engine import AiWalkmanEngine
+
 import time
 
 # Page Config
@@ -78,7 +79,9 @@ def main():
             )
             
             scale_factor = st.slider("Upscale Factor", 2, 4, 4, key="file_scale")
+            do_colorize = st.checkbox("Colorize B&W Movie", value=False, key="file_color")
             st.markdown('</div>', unsafe_allow_html=True)
+
 
         with col2:
             st.markdown('<div class="card">', unsafe_allow_html=True)
@@ -97,11 +100,12 @@ def main():
                     output_path = os.path.join("processed", output_name)
                     os.makedirs("processed", exist_ok=True)
 
-                    with st.spinner(f"AI is reconstructing frames..."):
+                    with st.spinner(f"AI is reconstructing and colorizing frames..."):
                         try:
-                            upscaler = AIVideoUpscaler(model_name=model_name, scale=scale_factor)
+                            upscaler = AiWalkmanEngine(model_name=model_name, scale=scale_factor, colorize=do_colorize)
                             upscaler.upscale_video(input_path, output_path)
                             st.balloons()
+
                             st.success("Transformation Complete!")
                             with open(output_path, "rb") as file:
                                 st.download_button(label="⬇️ Download", data=file, file_name=output_name)
@@ -119,14 +123,17 @@ def main():
         col_s1, col_s2 = st.columns(2)
         with col_s1:
             model_stream = st.selectbox("AI Model for Live", ["FSRCNN", "LapSRN"], key="stream_model")
+        with col_s2:
+            stream_colorize = st.checkbox("Colorize Live B&W", value=False, key="stream_color")
         
         if st.button("📺 Start HDMI Output"):
             if stream_url:
                 st.warning("A new window will open on your computer. Drag it to your HDMI screen and press 'F' for Fullscreen. (Press 'Q' to quit)")
                 try:
-                    upscaler = AIVideoUpscaler(model_name=model_stream.lower(), scale=2) # Scale 2 for better FPS
+                    upscaler = AiWalkmanEngine(model_name=model_stream.lower(), scale=2, colorize=stream_colorize) # Scale 2 for better FPS
                     upscaler.stream_live(stream_url)
                 except Exception as e:
+
                     st.error(f"Could not connect to channel: {e}")
             else:
                 st.error("Please enter a valid channel URL.")
