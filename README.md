@@ -8,7 +8,18 @@
 **AiWalkmanHD** is a premium AI-powered video reconstruction tool designed to transform low-resolution 90s, 60s, and 30s movies into modern High Definition (HD). Using state-of-the-art Deep Learning Super-Resolution models, AiWalkmanHD doesn't just stretch pixels—it **reconstructs** them.
 
 
+
 ---
+
+### ☕ Support My Work
+If you enjoy my contributions or tutorials on **FUNINAIOFFICIAL**, consider supporting me!
+
+<a href="https://buymeacoffee.com/jhparmar" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="50" style="border-radius: 8px;">
+</a>
+
+---
+
 
 ## ✨ Key Features
 - 🧠 **Deep Learning Models**: Multiple AI engines (FSRCNN, EDSR, LapSRN) for different types of movie restoration.
